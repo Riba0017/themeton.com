@@ -1,0 +1,9 @@
+
+.idea
+*.ai
+*.log
+*.pdf
+*.psd
+mockups/
+node_modules/
+Thumbs.db
