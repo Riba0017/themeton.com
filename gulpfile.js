@@ -13,11 +13,11 @@ gulp.task('clean', () => {
 gulp.task('style', () => {
     return gulp.src('src/scss/**/*.scss')
         .pipe(sass())
-        // .pipe(autoprefixer({
-        //     browsers: ['last 2 versions'],
-        //     cascade: false
-        // }))
-        // .pipe(cleanCSS({compatibility: 'ie8'}))
+        .pipe(autoprefixer({
+            browsers: ['last 2 versions'],
+            cascade: false
+        }))
+        .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('public/css/'));
 });
 
