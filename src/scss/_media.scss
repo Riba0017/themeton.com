@@ -1,0 +1,92 @@
+//INDEX
+
+@media (min-width: 765px) {
+  .index-content {
+
+    .demos {
+
+      .item-container {
+        flex-flow: row nowrap;
+        justify-content: center;
+        padding-top: 50px;
+
+        .demo-item {
+          flex: 0 1 30%;
+          margin: 0 15px;
+
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+  .advantages {
+    padding: 100px 50px 70px;
+
+    .adv-row {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-around;
+    }
+
+    .adv-item {
+      justify-content: flex-start;
+      align-items: center;
+    }
+  }
+}
+
+@media (min-width: 900px) {
+
+  .index-content {
+    .demos {
+      .item-container {
+        max-width: 100%;
+      }
+    }
+
+    .advantages {
+      padding: 100px 0 70px;
+
+      .adv-item {
+        flex-flow: row nowrap;
+        align-items: flex-start;
+
+        img {
+          margin-right: 30px;
+        }
+
+        .item-content {
+          text-align: left;
+          flex-basis: 70%;
+
+          p {
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .index-content {
+    .demos {
+      .page-header {
+        padding: 0;
+      }
+      .item-container {
+        max-width: 80%;
+      }
+    }
+
+    .advantages {
+      .adv-row {
+        max-width: 75%;
+      }
+    }
+  }
+}

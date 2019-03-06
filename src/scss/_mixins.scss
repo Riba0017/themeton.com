@@ -1,0 +1,19 @@
+//MIXINS
+
+@mixin flex-row {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+
+//VARIABLES
+
+$basic-font: 'MavenPro-Regular', sans-serif;
+$bold-font: 'MavenPro-Bold', sans-serif;
+$black-font: 'MavenPro-Black', sans-serif;
+$jpk-font: 'Jaapokki', sans-serif;

@@ -1,0 +1,97 @@
+@import "reset";
+@import "fonts";
+@import "mixins";
+@import "bundle";
+
+
+
+//TEMPORARY STYLES
+
+
+//SKELETON
+
+body {
+  @include flex-column;
+  min-height: 100vh;
+  min-width: 545px;
+}
+
+header,
+footer {
+  flex: 0 1 auto;
+}
+
+//STYLES
+[class^="icon-"]::after, [class*=" icon-"]::after {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+}
+
+.index-content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  .demos {
+    @include flex-column;
+    align-items: center;
+    padding-top: 60px;
+
+    .page-header {
+      padding: 20px 0 100px;
+
+      h2 {
+        padding-bottom: 30px;
+        text-align: center;
+        font-family: $jpk-font;
+        font-size: 40px;
+        font-weight: 200;
+        color: #333333;
+      }
+      p {
+        text-align: center;
+        font-family: $black-font;
+        font-size: 14px;
+        font-weight: bold;
+        color: #888888;
+        letter-spacing: 1px;
+      }
+    }
+
+    .item-container {
+      @include flex-column;
+      align-items: center;
+      margin-bottom: 100px;
+      width: 100%;
+    }
+  }
+
+  .advantages {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 70px 0;
+    background-color: #f1f2f1;
+  }
+
+}
+
+.footer-inner-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 182px;
+
+  p {
+    padding-top: 30px;
+    font-family: $jpk-font;
+    text-transform: uppercase;
+  }
+}
+
+
+@import "media";
