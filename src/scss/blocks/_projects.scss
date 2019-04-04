@@ -1,0 +1,18 @@
+
+.projects {
+  background: url("../images/project_bg.png") center no-repeat;
+
+  .container-col {
+    .container-heading,
+    .container-description {
+      color: #ffffff;
+    }
+
+    .project-list {
+
+      .project-item {
+        background: url("../images/logo_1.png") center no-repeat;
+      }
+    }
+  }
+}

@@ -3,21 +3,21 @@ let sass = require('gulp-sass');
 let server = require('browser-sync').create();
 let autoprefixer = require('gulp-autoprefixer');
 let clean = require('gulp-clean');
-let cleanCSS = require('gulp-clean-css');
+// let cleanCSS = require('gulp-clean-css');
 
-gulp.task('clean', () => {
-    return gulp.src('public/css/*.css', {read: false})
-        .pipe(clean());
-});
+// gulp.task('clean', () => {
+//     return gulp.src('public/css/*.css', {read: false})
+//         .pipe(clean());
+// });
 
 gulp.task('style', () => {
     return gulp.src('src/scss/**/*.scss')
         .pipe(sass())
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(cleanCSS({compatibility: 'ie8'}))
+        // .pipe(autoprefixer({
+        //     browsers: ['last 2 versions'],
+        //     cascade: false
+        // }))
+        // .pipe(cleanCSS({compatibility: 'ie8'}))
         .pipe(gulp.dest('public/css/'));
 });
 
@@ -39,9 +39,8 @@ gulp.task('watch', () => {
 });
 
 gulp.task('default', gulp.series(
-    gulp.parallel('clean'),
+    // gulp.parallel('clean'),
     gulp.parallel('style'),
     gulp.parallel('watch', 'server')
-
 ));
 

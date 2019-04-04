@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box; }
+
+ol, ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+body, .index-content .demos, .index-content .demos .item-container {
+  display: flex;
+  flex-flow: column nowrap; }
+
+body {
+  min-height: 100vh;
+  min-width: 545px; }
+
+header,
+footer {
+  flex: 0 1 auto; }
+
+.container-col {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  width: 85%;
+  max-width: 1170px;
+  margin: 0 auto; }
+  .container-col .container-heading,
+  .container-col .container-description {
+    text-align: center; }
+  .container-col .container-heading {
+    margin: 120px 0 23px 0;
+    font: 40px "Jaapokki", sans-serif;
+    color: #333333;
+    text-transform: uppercase; }
+  .container-col .container-description {
+    margin-bottom: 50px;
+    font: 16px/28px "MavenPro-Regular", sans-serif;
+    letter-spacing: 1px;
+    color: #888888; }
+
+@font-face {
+  font-family: 'Jaapokki';
+  src: url("../fonts/Jaapokki/jaapokki-regular.eot");
+  src: url("../fonts/Jaapokki/jaapokki-regular.eot#iefix") format("embedded-opentype"), url("../fonts/Jaapokki/jaapokki-regular.woff") format("woff"), url("../fonts/Jaapokki/jaapokki-regular.ttf") format("truetype"), url("../fonts/Jaapokki/jaapokki-regular.svg#jaapokki-400") format("svg"); }
+
+@font-face {
+  font-family: 'MavenPro-Regular';
+  src: url("../fonts/Maven_Pro/Mavenproregular.woff") format("woff"), url("../fonts/Maven_Pro/Mavenproregular.woff2") format("woff2"), url("../fonts/Maven_Pro/Mavenproregular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'MavenPro-Bold';
+  src: url("../fonts/Maven_Pro/Mavenprobold.woff") format("woff"), url("../fonts/Maven_Pro/Mavenprobold.woff2") format("woff2"), url("../fonts/Maven_Pro/Mavenprobold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'MavenPro-Black';
+  src: url("../fonts/Maven_Pro/Mavenproblack.woff") format("woff"), url("../fonts/Maven_Pro/Mavenproblack.woff2") format("woff2"), url("../fonts/Maven_Pro/Mavenproblack.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/font-awsome/fontello.eot?69794094");
+  src: url("../fonts/font-awsome/fontello.eot?69794094#iefix") format("embedded-opentype"), url("../fonts/font-awsome/fontello.woff2?69794094") format("woff2"), url("../fonts/font-awsome/fontello.woff?69794094") format("woff"), url("../fonts/font-awsome/fontello.ttf?69794094") format("truetype"), url("../fonts/font-awsome/fontello.svg?69794094#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+body, .index-content .demos, .index-content .demos .item-container {
+  display: flex;
+  flex-flow: column nowrap; }
+
+.demo-item {
+  width: 100%;
+  text-align: center; }
+  .demo-item .box-wrapper {
+    margin-top: 70px;
+    width: 100%; }
+    .demo-item .box-wrapper p {
+      font-family: "MavenPro-Bold", sans-serif;
+      padding-top: 30px;
+      text-transform: uppercase;
+      color: #333333;
+      font-size: 13px; }
+    .demo-item .box-wrapper .img-box {
+      display: inline-block;
+      position: relative;
+      margin: auto;
+      border: 3px solid #e66a55;
+      overflow: hidden; }
+      .demo-item .box-wrapper .img-box .link {
+        position: absolute;
+        background: rgba(0, 0, 0, 0.8);
+        opacity: 0;
+        transition: opacity 0.3s linear;
+        width: 100%;
+        height: 100%; }
+      .demo-item .box-wrapper .img-box .link a {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        padding: 12px 20px 10px;
+        border: 2px solid #ffffff;
+        color: #fff;
+        font-family: "Jaapokki", sans-serif;
+        font-size: 12px;
+        text-transform: uppercase;
+        transition: transform 0.4s ease;
+        transform: translate(-50%, -300px); }
+      .demo-item .box-wrapper .img-box img {
+        max-width: 100%;
+        display: block;
+        height: auto; }
+      .demo-item .box-wrapper .img-box .icon-right::after {
+        content: '\f178';
+        display: inline-block;
+        padding-left: 10px;
+        transition: transform 0.2s ease; }
+      .demo-item .box-wrapper .img-box .link a.icon-right:hover::after {
+        transform: translateX(10px); }
+    .demo-item .box-wrapper .img-box:hover .link {
+      opacity: 1; }
+    .demo-item .box-wrapper .img-box:hover .link a {
+      transform: translate(-50%, -50%); }
+
+.demo-item:not(:first-child) .img-box {
+  border-color: #333333; }
+
+.adv-item {
+  display: flex;
+  flex: 0 1 30%;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center; }
+  .adv-item img {
+    width: 65px;
+    height: auto;
+    margin-bottom: 20px; }
+  .adv-item .item-content {
+    text-align: center; }
+    .adv-item .item-content h3 {
+      margin-bottom: 10px;
+      font-family: "Jaapokki", sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 1px; }
+    .adv-item .item-content p {
+      margin-bottom: 10px;
+      padding: 0 7%;
+      font-family: "MavenPro-Regular", sans-serif;
+      font-weight: 200;
+      font-size: 14px;
+      letter-spacing: 1px;
+      line-height: 22px; }
+
+[class^="icon-"]::after, [class*=" icon-"]::after {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none; }
+
+.index-content {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column; }
+  .index-content .demos {
+    align-items: center;
+    padding-top: 60px; }
+    .index-content .demos .page-header {
+      padding: 20px 0 100px; }
+      .index-content .demos .page-header h2 {
+        padding-bottom: 30px;
+        text-align: center;
+        font-family: "Jaapokki", sans-serif;
+        font-size: 40px;
+        font-weight: 200;
+        color: #333333; }
+      .index-content .demos .page-header p {
+        text-align: center;
+        font-family: "MavenPro-Black", sans-serif;
+        font-size: 14px;
+        font-weight: bold;
+        color: #888888;
+        letter-spacing: 1px; }
+    .index-content .demos .item-container {
+      align-items: center;
+      margin-bottom: 100px;
+      width: 100%; }
+  .index-content .advantages {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 70px 0;
+    background-color: #f1f2f1; }
+
+.footer-inner-wrapper {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 182px; }
+  .footer-inner-wrapper p {
+    padding-top: 30px;
+    font-family: "Jaapokki", sans-serif;
+    text-transform: uppercase; }
+
+@media (min-width: 765px) {
+  .index-content .demos .item-container {
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding-top: 50px; }
+    .index-content .demos .item-container .demo-item {
+      flex: 0 1 30%;
+      margin: 0 15px; }
+      .index-content .demos .item-container .demo-item img {
+        width: 365px;
+        max-width: 100%;
+        height: auto; }
+  .advantages {
+    padding: 100px 50px 70px; }
+    .advantages .adv-row {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-around; }
+    .advantages .adv-item {
+      justify-content: flex-start;
+      align-items: center; } }
+
+@media (min-width: 900px) {
+  .index-content .demos .item-container {
+    max-width: 100%; }
+  .index-content .advantages {
+    padding: 100px 0 70px; }
+    .index-content .advantages .adv-item {
+      flex-flow: row nowrap;
+      align-items: flex-start; }
+      .index-content .advantages .adv-item img {
+        margin-right: 30px; }
+      .index-content .advantages .adv-item .item-content {
+        text-align: left;
+        flex-basis: 70%; }
+        .index-content .advantages .adv-item .item-content p {
+          padding: 0; } }
+
+@media (min-width: 1200px) {
+  .index-content .demos .page-header {
+    padding: 0; }
+  .index-content .demos .item-container {
+    max-width: 80%; }
+  .index-content .advantages .adv-row {
+    max-width: 75%; } }

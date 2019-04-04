@@ -15,6 +15,7 @@
           margin: 0 15px;
 
           img {
+            width: 365px;
             max-width: 100%;
             height: auto;
           }
@@ -28,7 +29,7 @@
 
     .adv-row {
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
       justify-content: space-around;
     }
 

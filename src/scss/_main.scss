@@ -1,0 +1,40 @@
+@import "mixins";
+
+body {
+  @extend %flex-column;
+  min-height: 100vh;
+  min-width: 545px;
+}
+
+header,
+footer {
+  flex: 0 1 auto;
+}
+
+.container-col {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  width: 85%;
+  max-width: 1170px;
+  margin: 0 auto;
+
+  .container-heading,
+  .container-description {
+    text-align: center;
+  }
+
+  .container-heading {
+    margin: 120px 0 23px 0;
+    font: 40px $jpk-font;
+    color: #333333;
+    text-transform: uppercase;
+  }
+
+  .container-description {
+    margin-bottom: 50px;
+    font: 16px/28px $basic-font;
+    letter-spacing: 1px;
+    color: #888888;
+  }
+}

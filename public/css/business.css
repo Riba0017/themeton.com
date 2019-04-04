@@ -1,0 +1,671 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box; }
+
+ol, ul {
+  list-style: none; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+body, .services .tabs section .left-side {
+  display: flex;
+  flex-flow: column nowrap; }
+
+body {
+  min-height: 100vh;
+  min-width: 545px; }
+
+header,
+footer {
+  flex: 0 1 auto; }
+
+.container-col {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  width: 85%;
+  max-width: 1170px;
+  margin: 0 auto; }
+  .container-col .container-heading,
+  .container-col .container-description {
+    text-align: center; }
+  .container-col .container-heading {
+    margin: 120px 0 23px 0;
+    font: 40px "Jaapokki", sans-serif;
+    color: #333333;
+    text-transform: uppercase; }
+  .container-col .container-description {
+    margin-bottom: 50px;
+    font: 16px/28px "MavenPro-Regular", sans-serif;
+    letter-spacing: 1px;
+    color: #888888; }
+
+@font-face {
+  font-family: 'Jaapokki';
+  src: url("../fonts/Jaapokki/jaapokki-regular.eot");
+  src: url("../fonts/Jaapokki/jaapokki-regular.eot#iefix") format("embedded-opentype"), url("../fonts/Jaapokki/jaapokki-regular.woff") format("woff"), url("../fonts/Jaapokki/jaapokki-regular.ttf") format("truetype"), url("../fonts/Jaapokki/jaapokki-regular.svg#jaapokki-400") format("svg"); }
+
+@font-face {
+  font-family: 'MavenPro-Regular';
+  src: url("../fonts/Maven_Pro/Mavenproregular.woff") format("woff"), url("../fonts/Maven_Pro/Mavenproregular.woff2") format("woff2"), url("../fonts/Maven_Pro/Mavenproregular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'MavenPro-Bold';
+  src: url("../fonts/Maven_Pro/Mavenprobold.woff") format("woff"), url("../fonts/Maven_Pro/Mavenprobold.woff2") format("woff2"), url("../fonts/Maven_Pro/Mavenprobold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'MavenPro-Black';
+  src: url("../fonts/Maven_Pro/Mavenproblack.woff") format("woff"), url("../fonts/Maven_Pro/Mavenproblack.woff2") format("woff2"), url("../fonts/Maven_Pro/Mavenproblack.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/font-awsome/fontello.eot?69794094");
+  src: url("../fonts/font-awsome/fontello.eot?69794094#iefix") format("embedded-opentype"), url("../fonts/font-awsome/fontello.woff2?69794094") format("woff2"), url("../fonts/font-awsome/fontello.woff?69794094") format("woff"), url("../fonts/font-awsome/fontello.ttf?69794094") format("truetype"), url("../fonts/font-awsome/fontello.svg?69794094#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+body, .services .tabs section .left-side {
+  display: flex;
+  flex-flow: column nowrap; }
+
+header {
+  position: absolute;
+  width: 100%;
+  min-height: 90px;
+  background-color: #191919;
+  z-index: 10; }
+  @media (min-width: 765px) {
+    header {
+      position: fixed;
+      background-color: transparent;
+      width: 100%; } }
+  header .top-menu {
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 0 30px; }
+    @media (min-width: 1000px) {
+      header .top-menu {
+        padding: 0; } }
+    header .top-menu .container {
+      width: 85%;
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center; }
+    header .top-menu .logo a {
+      display: inline-block;
+      height: 90px;
+      width: 98px;
+      background: left center url("../images/logo.png") no-repeat/contain; }
+    header .top-menu .menu-list {
+      display: none;
+      position: absolute;
+      top: 90px;
+      left: 0;
+      width: 100%;
+      background-color: #191919;
+      z-index: 10; }
+      @media (min-width: 1000px) {
+        header .top-menu .menu-list {
+          display: flex;
+          justify-content: center;
+          position: static;
+          background-color: transparent;
+          width: auto; } }
+      header .top-menu .menu-list.show {
+        display: block; }
+      header .top-menu .menu-list .list-item {
+        height: 100%;
+        padding: 0 30px;
+        text-align: center; }
+        @media (min-width: 1000px) {
+          header .top-menu .menu-list .list-item {
+            padding: 0; } }
+      header .top-menu .menu-list .list-item a {
+        display: inline-block;
+        width: 100%;
+        padding: 15px 0;
+        font-family: "Jaapokki", sans-serif;
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #ffffff;
+        border: none;
+        border-top: 1px solid #ffffff;
+        transition: color 0.2s linear, background 0.2s linear; }
+        @media (min-width: 765px) {
+          header .top-menu .menu-list .list-item a {
+            display: inline;
+            padding: 2px 4px;
+            border: 2px solid transparent; } }
+        @media (min-width: 1000px) {
+          header .top-menu .menu-list .list-item a {
+            font-size: 9px; } }
+        @media (min-width: 1200px) {
+          header .top-menu .menu-list .list-item a {
+            font-size: 11px; } }
+      header .top-menu .menu-list .list-item a:hover {
+        background: #e66a55; }
+        @media (min-width: 1000px) {
+          header .top-menu .menu-list .list-item a:hover {
+            background: none;
+            border: 2px solid #e66a55;
+            color: #e66a55; } }
+      header .top-menu .menu-list .list-item:first-child > a {
+        border-color: #e66a55;
+        color: #e66a55; }
+
+/*burger-button*/
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0; }
+
+.hamburger {
+  margin: 0 auto;
+  width: 27px;
+  height: 27px;
+  position: relative; }
+
+.hamburger .bar {
+  padding: 0;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: all 0.4s ease-in-out;
+  position: absolute; }
+
+.bar1 {
+  top: 0; }
+
+.bar2,
+.bar3 {
+  top: 11px; }
+
+.bar4 {
+  bottom: 0; }
+
+/* HAMBURGER 3 */
+.hamburger3 .bar1 {
+  transform-origin: 5%; }
+
+.hamburger3 .bar4 {
+  transform-origin: 5%; }
+
+.checkbox3:checked + label > .hamburger3 > .bar1 {
+  transform: rotate(45deg);
+  height: 3px;
+  width: 38px; }
+
+.checkbox3:checked + label > .hamburger3 > .bar3 {
+  transform: rotate(45deg);
+  height: 3px;
+  background-color: transparent; }
+
+.checkbox3:checked + label > .hamburger3 > .bar2 {
+  transform: rotate(-45deg);
+  height: 3px;
+  background-color: transparent; }
+
+.checkbox3:checked + label > .hamburger3 > .bar4 {
+  transform: rotate(-45deg);
+  height: 3px;
+  width: 38px; }
+
+@media (min-width: 1000px) {
+  .hamburger {
+    display: none; }
+  label.burger-label {
+    display: none; } }
+
+@font-face {
+  font-family: 'Jaapokki';
+  src: url("../fonts/Jaapokki/jaapokki-regular.eot");
+  src: url("../fonts/Jaapokki/jaapokki-regular.eot#iefix") format("embedded-opentype"), url("../fonts/Jaapokki/jaapokki-regular.woff") format("woff"), url("../fonts/Jaapokki/jaapokki-regular.ttf") format("truetype"), url("../fonts/Jaapokki/jaapokki-regular.svg#jaapokki-400") format("svg"); }
+
+@font-face {
+  font-family: 'MavenPro-Regular';
+  src: url("../fonts/Maven_Pro/Mavenproregular.woff") format("woff"), url("../fonts/Maven_Pro/Mavenproregular.woff2") format("woff2"), url("../fonts/Maven_Pro/Mavenproregular.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'MavenPro-Bold';
+  src: url("../fonts/Maven_Pro/Mavenprobold.woff") format("woff"), url("../fonts/Maven_Pro/Mavenprobold.woff2") format("woff2"), url("../fonts/Maven_Pro/Mavenprobold.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'MavenPro-Black';
+  src: url("../fonts/Maven_Pro/Mavenproblack.woff") format("woff"), url("../fonts/Maven_Pro/Mavenproblack.woff2") format("woff2"), url("../fonts/Maven_Pro/Mavenproblack.ttf") format("truetype"); }
+
+@font-face {
+  font-family: 'fontello';
+  src: url("../fonts/font-awsome/fontello.eot?69794094");
+  src: url("../fonts/font-awsome/fontello.eot?69794094#iefix") format("embedded-opentype"), url("../fonts/font-awsome/fontello.woff2?69794094") format("woff2"), url("../fonts/font-awsome/fontello.woff?69794094") format("woff"), url("../fonts/font-awsome/fontello.ttf?69794094") format("truetype"), url("../fonts/font-awsome/fontello.svg?69794094#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.wrapper {
+  height: 40vh;
+  width: 100%;
+  position: relative; }
+  @media (min-width: 765px) {
+    .wrapper {
+      height: 80vh; } }
+  .wrapper > input {
+    display: none; }
+  .wrapper #slide1:checked ~ .slider > .slide1,
+  .wrapper #slide2:checked ~ .slider > .slide2,
+  .wrapper #slide3:checked ~ .slider > .slide3,
+  .wrapper #slide4:checked ~ .slider > .slide4 {
+    opacity: 1;
+    z-index: 1; }
+  .wrapper .slider {
+    position: relative;
+    height: inherit;
+    width: inherit; }
+    .wrapper .slider .slides {
+      height: inherit;
+      position: absolute;
+      width: inherit;
+      opacity: 0;
+      z-index: 0;
+      transition: transform ease-in-out .5s, opacity ease-in-out .5s; }
+      .wrapper .slider .slides .slider-text {
+        position: relative;
+        top: 30%;
+        left: 10%;
+        width: 40%;
+        margin-bottom: 20px;
+        z-index: 7; }
+        .wrapper .slider .slides .slider-text h2, .wrapper .slider .slides .slider-text .colored {
+          font-family: "Jaapokki", sans-serif;
+          font-size: 2em;
+          text-transform: uppercase;
+          color: #ffffff;
+          line-height: 35px;
+          font-weight: 400; }
+        .wrapper .slider .slides .slider-text .colored {
+          color: #e66a55;
+          font-size: inherit; }
+        .wrapper .slider .slides .slider-text p {
+          font: 12px/14px "MavenPro-Regular", sans-serif;
+          color: #eaeaea; }
+        @media (min-width: 765px) {
+          .wrapper .slider .slides .slider-text h2, .wrapper .slider .slides .slider-text .colored {
+            font-size: 4em;
+            line-height: 65px; }
+          .wrapper .slider .slides .slider-text .colored {
+            font-size: inherit; }
+          .wrapper .slider .slides .slider-text p {
+            font-size: 14px;
+            line-height: 28px; } }
+        @media (min-width: 1200px) {
+          .wrapper .slider .slides .slider-text h2, .wrapper .slider .slides .slider-text .colored {
+            font-size: 4em;
+            line-height: 65px; }
+          .wrapper .slider .slides .slider-text .colored {
+            font-size: inherit; }
+          .wrapper .slider .slides .slider-text p {
+            font-size: 14px;
+            line-height: 28px; } }
+      .wrapper .slider .slides::before {
+        content: " ";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 5; }
+    .wrapper .slider .slide1 {
+      background-image: url("../images/about-us-slide.jpg"); }
+    .wrapper .slider .slide2 {
+      background-image: url("../images/philosophy-slide.jpg"); }
+    .wrapper .slider .slide3 {
+      background-image: url("../images/principles-slide.jpg"); }
+    .wrapper .slider .slide4 {
+      background-image: url("../images/experience-slide.jpg"); }
+    .wrapper .slider .slide1,
+    .wrapper .slider .slide2,
+    .wrapper .slider .slide3,
+    .wrapper .slider .slide4 {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center top; }
+  .wrapper .controls {
+    position: relative;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    top: -16vh;
+    height: 20%;
+    width: 75%;
+    margin: 0 auto;
+    z-index: 5; }
+    @media (max-width: 1000px) {
+      .wrapper .controls {
+        display: none; } }
+    .wrapper .controls span {
+      display: block;
+      font-size: 13px;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 35px 0; }
+    .wrapper .controls label {
+      cursor: pointer;
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      text-align: center; }
+      .wrapper .controls label::after {
+        content: " ";
+        display: block;
+        height: 12px;
+        left: -4px;
+        position: absolute;
+        top: -4px;
+        width: 12px;
+        border-radius: 50%; }
+      .wrapper .controls label:hover,
+      .wrapper .controls label #slide1:checked ~ .controls label:nth-of-type(1),
+      .wrapper .controls label #slide2:checked ~ .controls label:nth-of-type(2),
+      .wrapper .controls label #slide3:checked ~ .controls label:nth-of-type(3),
+      .wrapper .controls label #slide4:checked ~ .controls label:nth-of-type(4) {
+        border-bottom: 10px solid #e66a55; }
+
+.services {
+  min-height: 50em; }
+  .services .tabs {
+    min-width: 320px;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    /* Прячем чекбоксы */
+    /* Активация секций с помощью псевдокласса :checked */
+    /* Стили переключателей вкладок (табов) */ }
+    .services .tabs section {
+      display: none;
+      margin-top: 30px; }
+      .services .tabs section .left-side,
+      .services .tabs section .right-side {
+        width: 50%;
+        min-height: 500px;
+        float: left;
+        animation: fadeIn 1s both; }
+      .services .tabs section .left-side {
+        justify-content: center;
+        align-items: center;
+        background-color: #e66a55; }
+        .services .tabs section .left-side h4 {
+          margin-bottom: 45px;
+          font: 30px "Jaapokki", sans-serif;
+          color: #ffffff;
+          text-transform: uppercase; }
+        .services .tabs section .left-side p {
+          margin-bottom: 45px;
+          font: 16px/28px "MavenPro-Regular", sans-serif;
+          letter-spacing: 1px;
+          color: #ffffff;
+          width: 80%; }
+        .services .tabs section .left-side a {
+          font: 12px "Jaapokki", sans-serif;
+          color: #ffffff;
+          text-transform: uppercase; }
+      .services .tabs section .right-side {
+        background: url("../images/serv_2bg.jpg") center no-repeat/cover; }
+      .services .tabs section p {
+        margin: 0 0 5px;
+        line-height: 1.5;
+        color: #383838; }
+    .services .tabs section:nth-of-type(2n) .right-side {
+      background: url("../images/serv_bg.jpg") center no-repeat/cover; }
+    .services .tabs section::after {
+      content: " ";
+      display: table;
+      clear: both; }
+    .services .tabs > input {
+      display: none;
+      position: absolute;
+      /* Стили для активной вкладки */ }
+      .services .tabs > input:checked + label {
+        opacity: 1; }
+    .services .tabs #tab1:checked ~ #content-tab1,
+    .services .tabs #tab2:checked ~ #content-tab2,
+    .services .tabs #tab3:checked ~ #content-tab3,
+    .services .tabs #tab4:checked ~ #content-tab4,
+    .services .tabs #tab5:checked ~ #content-tab5,
+    .services .tabs #tab6:checked ~ #content-tab6 {
+      display: block; }
+    .services .tabs > label {
+      display: inline-block;
+      margin: 0 0 -1px;
+      padding: 15px 25px;
+      font-weight: 600;
+      text-align: center;
+      color: #333333;
+      opacity: 0.45;
+      font: 13px "Jaapokki", sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase; }
+      @media (max-width: 680px) {
+        .services .tabs > label {
+          font-size: 0; } }
+      @media (max-width: 400px) {
+        .services .tabs > label {
+          padding: 15px; } }
+      .services .tabs > label::before {
+        margin-right: 10px;
+        content: " ";
+        display: block;
+        width: 100px;
+        height: 100px; }
+        @media (max-width: 680px) {
+          .services .tabs > label::before {
+            margin: 0;
+            font-size: 18px; } }
+      .services .tabs > label[for*="1"]::before {
+        background: url("../images/serv_1.png") center no-repeat; }
+      .services .tabs > label[for*="2"]::before {
+        background: url("../images/serv_2.png") center no-repeat; }
+      .services .tabs > label[for*="3"]::before {
+        background: url("../images/serv_3.png") center no-repeat; }
+      .services .tabs > label[for*="4"]::before {
+        background: url("../images/serv_4.png") center no-repeat; }
+      .services .tabs > label[for*="5"]::before {
+        background: url("../images/serv_5.png") center no-repeat; }
+      .services .tabs > label[for*="6"]::before {
+        background: url("../images/serv_6.png") center no-repeat; }
+      .services .tabs > label:hover {
+        opacity: 1;
+        cursor: pointer; }
+
+/* Описываем анимацию свойства opacity */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Изменяем внутренние отступы
+*  переключателей для малых экранов
+*/
+@media screen and (max-width: 400px) {
+  .tabs > label {
+    padding: 15px; } }
+
+body, .services .tabs section .left-side {
+  display: flex;
+  flex-flow: column nowrap; }
+
+body {
+  min-height: 100vh;
+  min-width: 545px; }
+
+header,
+footer {
+  flex: 0 1 auto; }
+
+.container-col {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  width: 85%;
+  max-width: 1170px;
+  margin: 0 auto; }
+  .container-col .container-heading,
+  .container-col .container-description {
+    text-align: center; }
+  .container-col .container-heading {
+    margin: 120px 0 23px 0;
+    font: 40px "Jaapokki", sans-serif;
+    color: #333333;
+    text-transform: uppercase; }
+  .container-col .container-description {
+    margin-bottom: 50px;
+    font: 16px/28px "MavenPro-Regular", sans-serif;
+    letter-spacing: 1px;
+    color: #888888; }
+
+.history {
+  border-bottom: 1px solid #eaeaea; }
+
+.process {
+  margin-bottom: 140px; }
+  .process .tabs {
+    min-width: 320px;
+    width: 85%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+    /* Прячем чекбоксы */
+    /* Активация секций с помощью псевдокласса :checked */
+    /* Стили переключателей вкладок (табов) */ }
+    .process .tabs section {
+      display: none;
+      margin-top: 30px; }
+      .process .tabs section .section-content {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-around;
+        align-items: flex-start;
+        animation: fadeIn 1s both; }
+        .process .tabs section .section-content p {
+          width: 20%;
+          font: 14px/28px "MavenPro-Regular", sans-serif;
+          letter-spacing: 1px;
+          color: #888888; }
+    .process .tabs > input {
+      display: none;
+      position: absolute;
+      /* Стили для активной вкладки */ }
+      .process .tabs > input:checked + label {
+        opacity: 1; }
+    .process .tabs #tab10:checked ~ #content-tab10,
+    .process .tabs #tab20:checked ~ #content-tab20,
+    .process .tabs #tab30:checked ~ #content-tab30,
+    .process .tabs #tab40:checked ~ #content-tab40 {
+      display: block; }
+    .process .tabs > label {
+      display: inline-block;
+      width: 24.5%;
+      margin: 0 0 -1px;
+      padding: 15px 25px;
+      font-weight: 600;
+      text-align: center;
+      color: #333333;
+      opacity: 0.45;
+      font: 13px "Jaapokki", sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase; }
+      @media (max-width: 680px) {
+        .process .tabs > label {
+          font-size: 0; } }
+      @media (max-width: 400px) {
+        .process .tabs > label {
+          padding: 15px; } }
+      .process .tabs > label::before {
+        margin-right: 10px;
+        content: " ";
+        display: block;
+        width: 100%;
+        height: 100px; }
+        @media (max-width: 680px) {
+          .process .tabs > label::before {
+            margin: 0;
+            font-size: 18px; } }
+      .process .tabs > label[for*="10"]::before {
+        background: url("../images/proc_1.png") center no-repeat; }
+      .process .tabs > label[for*="20"]::before {
+        background: url("../images/proc_2.png") center no-repeat; }
+      .process .tabs > label[for*="30"]::before {
+        background: url("../images/proc_3.png") center no-repeat; }
+      .process .tabs > label[for*="40"]::before {
+        background: url("../images/proc_4.png") center no-repeat; }
+      .process .tabs > label:hover {
+        opacity: 1;
+        cursor: pointer; }
+      .process .tabs > label::after {
+        content: "1";
+        display: block;
+        width: 50px;
+        height: 50px;
+        margin: 50px auto 0;
+        background-color: #e66a55;
+        border-radius: 50%;
+        font-size: 20px;
+        line-height: 55px;
+        color: #ffffff; }
+    .process .tabs > label:nth-of-type(2)::after {
+      content: "2"; }
+    .process .tabs > label:nth-of-type(3)::after {
+      content: "3"; }
+    .process .tabs > label:nth-of-type(4)::after {
+      content: "4"; }
+
+/* Описываем анимацию свойства opacity */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+/* Изменяем внутренние отступы
+*  переключателей для малых экранов
+*/
+@media screen and (max-width: 400px) {
+  .tabs > label {
+    padding: 15px; } }
+
+.projects {
+  background: url("../images/project_bg.png") center no-repeat; }
+  .projects .container-col .container-heading,
+  .projects .container-col .container-description {
+    color: #ffffff; }
+  .projects .container-col .project-list .project-item {
+    background: url("../images/logo_1.png") center no-repeat; }

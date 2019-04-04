@@ -1,0 +1,203 @@
+header {
+  position: absolute;
+  width: 100%;
+  min-height: 90px;
+  background-color: #191919;
+  z-index: 10;
+
+  @media (min-width: 765px) {
+    position: fixed;
+    background-color: transparent;
+    width: 100%;
+  }
+
+  .top-menu {
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 0 30px;
+
+    @media (min-width: 1000px) {
+      padding: 0;
+    }
+
+    .container {
+      width: 85%;
+      max-width: 1170px;
+      margin: 0 auto;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo a {
+      display: inline-block;
+      height: 90px;
+      width: 98px;
+      background: left center url("../images/logo.png") no-repeat / contain;
+    }
+
+    .menu-list {
+      display: none;
+      position: absolute;
+      top: 90px;
+      left: 0;
+      width: 100%;
+      background-color: #191919;
+      z-index: 10;
+
+      @media (min-width: 1000px) {
+        display: flex;
+        justify-content: center;
+        position: static;
+        background-color: transparent;
+        width: auto;
+      }
+
+      &.show {
+        display: block;
+      }
+
+      .list-item {
+        height: 100%;
+        padding: 0 30px;
+        text-align: center;
+
+        @media (min-width: 1000px) {
+          padding: 0;
+        }
+      }
+
+      .list-item a {
+        display: inline-block;
+        width: 100%;
+        padding: 15px 0;
+        font-family: $jpk-font;
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #ffffff;
+        border: none;
+        border-top: 1px solid #ffffff;
+        transition: color 0.2s linear, background 0.2s linear;
+
+        @media (min-width: 765px) {
+          display: inline;
+          padding: 2px 4px;
+          border: 2px solid transparent;
+        }
+        @media (min-width: 1000px) {
+          font-size: 9px;
+        }
+        @media (min-width: 1200px) {
+          font-size: 11px;
+        }
+      }
+
+      .list-item a:hover {
+        background: $red;
+
+        @media (min-width: 1000px) {
+          background: none;
+          border: 2px solid $red;
+          color: $red;
+        }
+      }
+
+      .list-item:first-child > a {
+        border-color: $red;
+        color: $red;
+      }
+    }
+  }
+}
+
+/*burger-button*/
+
+.visuallyHidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+
+.hamburger {
+  margin: 0 auto;
+  width: 27px;
+  height: 27px;
+  position: relative;
+}
+
+.hamburger .bar {
+  padding: 0;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  display: block;
+  transition: all 0.4s ease-in-out;
+  position: absolute;
+}
+
+.bar1 {
+  top: 0;
+}
+
+.bar2,
+.bar3 {
+  top: 11px;
+}
+
+.bar4 {
+  bottom: 0;
+}
+
+/* HAMBURGER 3 */
+
+.hamburger3 .bar1 {
+  transform-origin: 5%;
+}
+
+.hamburger3 .bar4 {
+  transform-origin: 5%;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar1{
+  transform: rotate(45deg);
+  height: 3px;
+  width: 38px;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar3{
+  transform: rotate(45deg);
+  height: 3px;
+  background-color: transparent;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar2{
+  transform: rotate(-45deg);
+  height: 3px;
+  background-color: transparent;
+}
+
+.checkbox3:checked + label > .hamburger3 > .bar4{
+  transform: rotate(-45deg);
+  height: 3px;
+  width: 38px;
+}
+
+@media (min-width: 1000px) {
+  .hamburger {
+    display: none;
+  }
+  label.burger-label {
+    display: none;
+  }
+}

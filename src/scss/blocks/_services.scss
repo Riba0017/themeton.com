@@ -1,0 +1,184 @@
+
+.services {
+  min-height: 50em;
+
+  .tabs {
+    min-width: 320px;
+    width: 100%;
+    padding: 0;
+    margin: 0 auto;
+    text-align: center;
+
+    section {
+      display: none;
+      margin-top: 30px;
+
+      .left-side,
+      .right-side {
+        width: 50%;
+        min-height: 500px;
+        float: left;
+        animation: fadeIn 1s both;
+      }
+
+      .left-side {
+        @extend %flex-column;
+        justify-content: center;
+        align-items: center;
+        background-color: $red;
+
+        h4 {
+          margin-bottom: 45px;
+          font: 30px $jpk-font;
+          color: #ffffff;
+          text-transform: uppercase;
+        }
+
+        p {
+          margin-bottom: 45px;
+          font: 16px/28px $basic-font;
+          letter-spacing: 1px;
+          color: #ffffff;
+          width: 80%;
+        }
+
+        a {
+          font: 12px $jpk-font;
+          color: #ffffff;
+          text-transform: uppercase;
+        }
+      }
+
+      .right-side {
+        background: url("../images/serv_2bg.jpg") center no-repeat / cover;
+      }
+
+      p {
+        margin: 0 0 5px;
+        line-height: 1.5;
+        color: #383838;
+      }
+    }
+
+    section:nth-of-type(2n) {
+      .right-side {
+        background: url("../images/serv_bg.jpg") center no-repeat / cover;
+      }
+    }
+
+    section::after {
+      content: " ";
+      display: table;
+      clear: both;
+    }
+
+    /* Прячем чекбоксы */
+    & > input {
+      display: none;
+      position: absolute;
+
+      /* Стили для активной вкладки */
+      &:checked + label {
+        //color: #555;
+        opacity: 1;
+      }
+    }
+    /* Активация секций с помощью псевдокласса :checked */
+    #tab1:checked~#content-tab1,
+    #tab2:checked~#content-tab2,
+    #tab3:checked~#content-tab3,
+    #tab4:checked~#content-tab4,
+    #tab5:checked~#content-tab5,
+    #tab6:checked~#content-tab6 {
+      display: block;
+    }
+
+    /* Стили переключателей вкладок (табов) */
+    & > label {
+      display: inline-block;
+      margin: 0 0 -1px;
+      padding: 15px 25px;
+      font-weight: 600;
+      text-align: center;
+      color: #333333;
+      opacity: 0.45;
+      font: 13px $jpk-font;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      @media (max-width: 680px) {
+          font-size: 0;
+      }
+
+      @media (max-width: 400px) {
+          padding: 15px;
+      }
+
+      &::before {
+        margin-right: 10px;
+        content: " ";
+        display: block;
+        width: 100px;
+        height: 100px;
+
+        @media (max-width: 680px) {
+            margin: 0;
+            font-size: 18px;
+        }
+      }
+      &[for*="1"]::before {
+        background: url("../images/serv_1.png") center no-repeat;
+      }
+      &[for*="2"]::before {
+        background: url("../images/serv_2.png") center no-repeat;
+      }
+      &[for*="3"]::before {
+        background: url("../images/serv_3.png") center no-repeat;
+      }
+      &[for*="4"]::before {
+        background: url("../images/serv_4.png") center no-repeat;
+      }
+      &[for*="5"]::before {
+        background: url("../images/serv_5.png") center no-repeat;
+      }
+      &[for*="6"]::before {
+        background: url("../images/serv_6.png") center no-repeat;
+      }
+
+      &:hover {
+        opacity: 1;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+/* Описываем анимацию свойства opacity */
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Изменяем внутренние отступы
+*  переключателей для малых экранов
+*/
+@media screen and (max-width: 400px) {
+  .tabs>label {
+    padding: 15px;
+  }
+}
+
+

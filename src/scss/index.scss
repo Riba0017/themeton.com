@@ -1,25 +1,13 @@
 @import "reset";
+@import "main";
 @import "fonts";
 @import "mixins";
-@import "bundle";
-
-
+//@import "bundle";
+@import "blocks/demo-item";
+@import "blocks/adv-item";
 
 //TEMPORARY STYLES
 
-
-//SKELETON
-
-body {
-  @include flex-column;
-  min-height: 100vh;
-  min-width: 545px;
-}
-
-header,
-footer {
-  flex: 0 1 auto;
-}
 
 //STYLES
 [class^="icon-"]::after, [class*=" icon-"]::after {
@@ -35,7 +23,7 @@ footer {
   flex-direction: column;
 
   .demos {
-    @include flex-column;
+    @extend %flex-column;
     align-items: center;
     padding-top: 60px;
 
@@ -61,7 +49,7 @@ footer {
     }
 
     .item-container {
-      @include flex-column;
+      @extend %flex-column;
       align-items: center;
       margin-bottom: 100px;
       width: 100%;
@@ -92,6 +80,5 @@ footer {
     text-transform: uppercase;
   }
 }
-
 
 @import "media";
